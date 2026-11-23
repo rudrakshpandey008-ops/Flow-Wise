@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0B1120;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Leaflet fixes for dark theme */
+.leaflet-container {
+  background: #0B1120;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #111827;
+  color: #F8FAFC;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.leaflet-popup-tip {
+  background: #111827;
+}
+
+.leaflet-control-zoom a {
+  background: #111827 !important;
+  color: #F8FAFC !important;
+  border-color: #334155 !important;
+}
+
+/* Glass effect utility */
+.glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, opacity, transform;
+  transition-duration: 150ms;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Input autofill dark fix */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px #111827 inset !important;
+  -webkit-text-fill-color: #F8FAFC !important;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #0B1120;
+  color: #F8FAFC;
+  margin: 0;
+  padding: 0;
+}
